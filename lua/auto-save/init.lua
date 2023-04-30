@@ -97,6 +97,7 @@ local function save(buf)
     end)
   end
 
+  callback("after_saving")
   logger.log(buf, "Saved buffer")
 
   if cnf.opts.execution_message.enabled == true then
